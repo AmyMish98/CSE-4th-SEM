@@ -51,6 +51,7 @@ private: card deck[52];
 		else
 		i--;
 	 }
+	 }
 public: void initialize()
 	{
 	 int i=0,j=0,k=0;
@@ -96,4 +97,38 @@ public: void initialize()
 
 class Player
 {
+    private: long int playerID;
+    char name[50];
+    card presentCards[5];
+    int noOfCards;
+    
+    public: card * showCards()
+    {
+        return presentCards;
+    }
+    
+    int howManyCards()
+    {
+        return noOfCards;
+    }
+    
+    void pickACard(deckOfCards A)
+    {
+        presentCards[]=A.pickACard();
+    }
+    
+    void pickACard(deckOfCards A, suit st, rank rk)
+    {
+        
+        presentCards[]=A.pickACard(suit st, rank rk);
+    }
+};
+
+class Game
+{
+    private: int numberPlayer;
+    Player X[numberPlayer];
+    public: 
+    
+}
 
