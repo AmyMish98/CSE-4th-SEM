@@ -1,3 +1,5 @@
+//Program to perform push and pop operations on Stack
+
 #include<stdio.h>
 
 int stack[100], top=-1;
