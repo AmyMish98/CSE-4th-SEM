@@ -2,13 +2,19 @@
 #include <stdio.h>
 #define size 5
 
-void insertq(int);
-void deleteq();
-void display();
-
 int queue[size];
 int front =  - 1;
 int rear =  - 1;
+void insertq(int);
+void deleteq();
+void display();
+int isEmpty()
+{
+    if (front ==rear)
+        return 0;
+    else
+        return 1;
+}
 
 int main()
 {
@@ -60,6 +66,10 @@ void insertq(int item)
 
 void display()
 {
+    if (isEmpty()==0)
+        printf("\n Queue Empty!");
+    else
+    {
     int i;
     printf("\n");
     if (front > rear)
@@ -75,6 +85,7 @@ void display()
     {
         for (i = front; i <= rear; i++)
             printf("%d ", queue[i]);
+    }
     }
 }
 
