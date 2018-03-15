@@ -1,12 +1,16 @@
 //Write a program to implement linear queue using array
 #include<stdio.h>
-int queue[4], front=0, rear=0;
+#define n 4
+int queue[n], front=0, rear=0;
 void enQ(int item)
 {
-    if (size()==4)
+    if (size()==n||front==n)
         printf("\n Overflow");
     else
+    {
         queue[rear++]=item;
+        printf("\n Element Inserted");
+    }
 }
 
 void deQ()
@@ -62,6 +66,7 @@ int main()
                 break;
         default: printf("\n Invalid case");
     }
+    printf("\n %d %d", front, rear);
     }while(choice!=4);
     return 0;
 }
