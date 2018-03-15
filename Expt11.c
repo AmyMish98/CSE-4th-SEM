@@ -1,9 +1,9 @@
 //Write a program to implement linear queue using array
 #include<stdio.h>
-int queue[100], front=0, rear=0;
+int queue[4], front=0, rear=0;
 void enQ(int item)
 {
-    if (size()==100)
+    if (size()==4)
         printf("\n Overflow");
     else
         queue[rear++]=item;
@@ -29,13 +29,13 @@ int isEmpty()
 }
 int size()
 {
-    return (rear-front+1);
+    return (rear-front);
 }
 
 void  display()
 {
     int i;
-    for (i=front;i<size();i++)
+    for (i=front;i<=size();i++)
     printf("\n %d", queue[i]);
 }
 
