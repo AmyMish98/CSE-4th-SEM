@@ -1,6 +1,6 @@
 //Write a program to implement circular queue using array
 #include <stdio.h>
-#define size 5
+#define size 4
 
 int queue[size];
 int front =  - 1;
@@ -48,7 +48,7 @@ void insertq(int item)
     if ((front == 0 && rear == size - 1) || (front == rear + 1))
         printf("queue is full");
 
-    else if (rear ==  - 1)
+    else{ if (rear ==  - 1)
     {
         rear++;
         front++;
@@ -62,6 +62,7 @@ void insertq(int item)
         rear++;
     }
     queue[rear] = item;
+}
 }
 
 void display()
